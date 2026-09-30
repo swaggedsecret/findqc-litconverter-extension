@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LitConverter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="litconverter-popup-body">
+    <div class="litconverter-popup-shell">
+      <header class="litconverter-header">
+            <div class="litconverter-brand">
+              <div class="litconverter-brand-mark">L</div>
+              <div class="litconverter-brand-copy">
+                <div class="litconverter-brand-name">LitConvert</div>
+                <div class="litconverter-brand-tag">LitBuy</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <button id="open-app-btn" type="button" class="litconverter-app-btn">Open Site</button>
+              <button id="open-extension-link" type="button" class="litconverter-findqc-badge" title="Open FindQC Extension Info">
+                <span class="litconverter-findqc-badge-dot">F</span>
+                <span style="font-size:12px;font-weight:700">FindQC Extension</span>
+              </button>
+            </div>
+      </header>
+
+      <div class="litconverter-section">
+        <label class="litconverter-label" for="url-input">Product URL</label>
+        <input id="url-input" class="litconverter-input" type="text" placeholder="https://detail.1688.com/offer/1234567890.html" />
+        <button id="convert-btn" type="button" class="litconverter-primary-btn">Convert Link</button>
+      </div>
+
+      <div class="litconverter-section">
+        <label class="litconverter-label" for="affiliate-input">Referral / Partner Code</label>
+        <input id="affiliate-input" class="litconverter-input" type="text" placeholder="Optional: MYCODE123" />
+      </div>
+
+      <div class="litconverter-section">
+        <label class="litconverter-label" for="mode-select">Action Mode</label>
+        <select id="mode-select" class="litconverter-select">
+          <option value="direct">Open LitBuy directly</option>
+          <option value="webapp">Open through LitConverter app</option>
+        </select>
+      </div>
+
+      <div class="litconverter-section">
+        <label class="litconverter-label" for="output-link">Generated Link</label>
+        <textarea id="output-link" class="litconverter-output" readonly placeholder="Your generated LitBuy URL appears here"></textarea>
+        <div class="litconverter-actions">
+          <button id="copy-btn" type="button" class="litconverter-ghost-btn">Copy</button>
+          <button id="open-link-btn" type="button" class="litconverter-primary-btn">Open</button>
+        </div>
+      </div>
+
+      <div id="status" class="litconverter-status" aria-live="polite"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

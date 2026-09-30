@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "LitConverter - FindQC Companion",
+  "version": "1.0.0",
+  "description": "Convert Taobao, Weidian, 1688 and Tmall links into LitBuy purchasing links while browsing FindQC.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://findqc.com/*",
+    "https://*.findqc.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://findqc.com/*",
+        "https://*.findqc.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "LitConverter - FindQC Companion",
+    "default_popup": "popup.html"
+  }
+}
