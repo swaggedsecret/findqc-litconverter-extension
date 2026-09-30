@@ -185,6 +185,7 @@ git push -u origin main
 - The extension is intentionally limited to `findqc.com`.
 - It does not run outside FindQC.
 - This repo contains the extension source only, not the website app.
+- LitConverter Website: litconverter.netlify.app
 
 ## License
 
